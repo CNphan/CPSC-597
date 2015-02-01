@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LMS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href = "css/bootstrap.min.css" rel = "stylesheet">
+		<link href = "css/styles.css" rel = "stylesheet">
+		<style>
+		a {font-family:Arial}
+		a:link{text-decoration:none}
+		a:hover{text-decoration:none;font-weight:bold}
+		a:visited{text-decoration:none}
+		a:active{text-decoration:none}
+		li {margin-left: -30px}
+		
+		</style>
+		
+	</head>
+	<body>
+<!--Header-->
+		<div class = "navbar navbar-inverse navbar-static-top">
+			<div class = "container">
+				<a href = "#" class = "navbar-brand">Educate LMS</a>
+					<!-- collapse button visible on mobile-->
+					<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+						<span class = "icon-bar"></span>
+						<span class = "icon-bar"></span>
+						<span class = "icon-bar"></span>
+					</button>
+					<!-- collapse visible on mobile-->
+					<div class = "collapse navbar-collapse navHeaderCollapse">
+						<ul class = "nav navbar-nav navbar-right">
+							<li><a href ="content.html">Your are logged in as: <strong>Christie Phan</strong></a></li>
+						</ul>
+					</div>
+					   
+			</div>
+		</div>
+<!--Body-->
+<div class= "container">
+<!--row 1-->
+	<div class="row">
+<!--Left-->
+		<div class = "col-md-2">
+<!--Admin collapse-->
+			<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="heading00">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#admin" aria-expanded="true" aria-controls="admin">
+				 Administration
+				</a>
+			  </h4>
+			</div>
+			<div id="admin" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading00">
+			  <div class="panel-body">
+				<a href = "http://www.google.com"<button type="button" class="btn btn-success">
+				<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Grades</button></a>
+			  </div>
+			</div>
+			</div>
+<!--profile setting collapse-->
+			<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="heading0">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+				 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>	
+				 Profile Settings
+				</a>
+			  </h4>
+			</div>
+			<div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+			  <div class="panel-body">
+				<ul>
+					<li><a href="#">Edit Profile</a></li>
+					<li><a href="#">Portfolios</a></li>
+					<li><a href="#">Messaging</a></li>
+				</ul>
+			  </div>
+			</div>
+			</div>
+<!--My courses collapse-->
+			<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="headingZero">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+				 My Courses
+				</a>
+			  </h4>
+			</div>
+			<div id="collapseZero" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingZero">
+			  <div class="panel-body">
+				<ul>
+					<li class="active"><a href="#">History 101</a></li>
+					<li><a href="#">English 101</a></li>
+					<li><a href="#">Software Engineering 101</a></li>
+				</ul>
+			  </div>
+			</div>
+			</div>
+			
+		</div>
+<!--center-->
+		<div class = "col-md-6">
+		<center><h1>Welcome to History 101</h1></center>
+<!--start topic 1-->
+			<div class="panel panel-info">
+			<div class="panel-heading" role="tab" id="headingOne">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				  Topic 1 : January 21,2015
+				</a>
+				<a href="#edit" data-toggle="modal" class = "btn btn-group-sm btn-default" >Edit</a>
+			  </h4>
+			</div>
+			<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+			  <div class="panel-body">
+				<ul>
+					<li>Homework 1 Due</li>
+				</ul>
+			  </div>
+			</div>
+			</div>
+<!--start topic 2-->
+			<div class="panel panel-info">
+			<div class="panel-heading" role="tab" id="headingTwo">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+				  Topic 2: January 28,2015
+				</a>
+				<a href="#edit" data-toggle="modal" class = "btn btn-group-sm btn-default" >Edit</a>
+			  </h4>
+			</div>
+			<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+			  <div class="panel-body">
+				<ul>
+					<li>Homework 2 Due</li>
+				</ul>
+			  </div>
+			</div>
+			</div>
+<!--start topic 3-->
+			<div class="panel panel-info">
+			<div class="panel-heading" role="tab" id="headingThree">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+				  Topic 3: February 4,2015
+				</a>
+				<a href="#edit" data-toggle="modal" class = "btn btn-group-sm btn-default" >Edit</a>
+			  </h4>
+			</div>
+			<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+			  <div class="panel-body">
+				<ul>
+					<li>Homework 3 Due</li>
+				</ul>
+			  </div>
+			</div>
+			</div>
+		</div>
+<!--right-->
+		<div class = "col-md-2">
+<!--Upcoming Events-->
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="Upcoming">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#UpEvent" aria-expanded="true" aria-controls="UpEvent">
+				 Upcoming Events
+				</a>
+			  </h4>
+			</div>
+			<div id="UpEvent" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Upcoming">
+			  <div class="panel-body">
+				<p> Martin Luther King Jr.Day-Campus Closed</p>
+				<a href = "#" class = "btn btn-info">Calendar</a>
+			  </div>
+			</div>
+		</div>
+<!--Message-->
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="Message0">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#Message" aria-expanded="true" aria-controls="Message">
+				 Message
+				</a>
+			  </h4>
+			</div>
+			<div id="Message" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Message">
+			  <div class="panel-body">
+				<a href="#"<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> You have one new message</p></a>
+			  </div>
+			</div>
+		</div>
+			
+		</div>
+	</div> <!--end row-->
+</div><!--end container-->
+
+<!--Footer-->
+		<div class = "navbar navbar-default navbar-fixed-bottom">
+			<div class = "container">
+				<p class = "navbar-text pull-left">Site Built By Christie Phan</p>
+				<a href = "https://www.linkedin.com/in/christiephan" class = "navbar-btn btn-primary btn pull-right">LinkedIn</a>
+			</div>
+		</div>
+		
+<!-- Modal: loads last --->
+<!--Edit modal-->
+		<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="edit">Edit Topic</h4>
+				</div>
+				<div class="modal-body">
+					
+					<textarea class="form-control" rows="3"></textarea>
+				
+				</div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			  </div>
+				</div>
+			</div>
+		</div>
+
+<!--End Modal-->
+<!--Start Script-->
+			<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+			<script src = "js/bootstrap.js"></script>
+		   
+	</body>
+</html>
