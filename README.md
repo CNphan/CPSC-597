@@ -1,5 +1,6 @@
 # CPSC-597
-Graduate Project-mini LMS 
+###Graduate Project-mini LMS 
+
 
 Sprint 1: Front-End Development 
 <ul>
