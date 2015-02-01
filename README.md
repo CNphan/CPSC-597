@@ -2,7 +2,7 @@
 ###Graduate Project-mini LMS 
 ### Software Engineering @ CSUF, 2015
 
-Sprint 1: Front-End Development 
+####Sprint 1: Front-End Development 
 <ul>
   <li>Learn and familiarize self with programming languages/technologies</li>
   <li>Create SRS</li>
