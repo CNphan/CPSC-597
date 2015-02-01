@@ -1,6 +1,6 @@
 # CPSC-597
 ###Graduate Project-mini LMS 
-
+### Software Engineering @ CSUF, 2015
 
 Sprint 1: Front-End Development 
 <ul>
