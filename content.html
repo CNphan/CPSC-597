@@ -13,6 +13,9 @@
 		a:active{text-decoration:none}
 		li {margin-left: -30px}
 		
+		.calendarbox
+		{position:relative;top:-10px; right:0px;height:100px;width:50px}
+		
 		</style>
 		
 	</head>
@@ -41,7 +44,7 @@
 <!--row 1-->
 	<div class="row">
 <!--Left-->
-		<div class = "col-md-2">
+		<div class = "col-md-3">
 <!--Admin collapse-->
 			<div class="panel panel-default">
 			<div class="panel-heading" role="tab" id="heading00">
@@ -158,7 +161,7 @@
 			</div>
 		</div>
 <!--right-->
-		<div class = "col-md-2">
+		<div class = "col-md-3">
 <!--Upcoming Events-->
 		<div class="panel panel-default">
 			<div class="panel-heading" role="tab" id="Upcoming">
@@ -171,7 +174,7 @@
 			<div id="UpEvent" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Upcoming">
 			  <div class="panel-body">
 				<p> {Martin Luther King Jr.Day-Campus Closed}</p>
-				<a href = "#" class = "btn btn-info">Calendar</a>
+				<a href="#calendar" data-toggle="modal" class = "btn btn-group-sm btn-info" >Calendar</a>
 			  </div>
 			</div>
 		</div>
@@ -225,7 +228,85 @@
 			</div>
 		</div>
 
-<!--End Modal-->
+<!--End Edit Modal-->
+<!--start calendar modal-->
+<div class="modal fade" id="calendar" tabindex="-1" role="dialog" aria-labelledby="calendar" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<center><h4 class="modal-title" id="edit"> {February}, {2015}</h4></center>
+				</div>
+				<div class="modal-body">
+					<table class = "table table-bordered">
+						<tr class = "info">
+							<strong><td>Sun</td></strong>
+							<strong><td>Mon</td></strong>
+							<strong><td>Tues</td></strong>
+							<strong><td>Wed</td></strong>
+							<strong><td>Thu</td></strong>
+							<strong><td>Fri</td></strong>
+							<strong><td>Sat</td></strong>
+						</tr>
+						<tr>
+							<td class="calendarbox">1</td>
+							<td class="calendarbox">2</td>
+							<td class="calendarbox">3</td>
+							<td class="calendarbox">4</td>
+							<td class="calendarbox">5</td>
+							<td class="calendarbox">6</td>
+							<td class="calendarbox">7</td>
+						</tr>
+						<tr>
+							<td class="calendarbox">8</td>
+							<td class="calendarbox">9</td>
+							<td class="calendarbox">10</td>
+							<td class="calendarbox">11</td>
+							<td class="calendarbox">12</td>
+							<td class="calendarbox">13</td>
+							<td class="calendarbox">14</td>
+						</tr>
+						<tr>
+							<td class="calendarbox">15</td>
+							<td class="calendarbox">16</td>
+							<td class="calendarbox">17</td>
+							<td class="calendarbox">18</td>
+							<td class="calendarbox">19</td>
+							<td class="calendarbox">20</td>
+							<td class="calendarbox">21</td>
+						</tr>
+						<tr>
+							<td class="calendarbox">22</td>
+							<td class="calendarbox">23</td>
+							<td class="calendarbox">24</td>
+							<td class="calendarbox">25</td>
+							<td class="calendarbox">26</td>
+							<td class="calendarbox">27</td>
+							<td class="calendarbox">28</td>
+						</tr>
+						<tr>
+							<td class="calendarbox">29</td>
+							<td class="calendarbox">30</td>
+							<td class="calendarbox default"> </td>
+							<td class="calendarbox default"> </td>
+							<td class="calendarbox default"> </td>
+							<td class="calendarbox default"> </td>
+							<td class="calendarbox default"> </td>
+						</tr>
+					</table>
+					
+					
+				
+				</div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			  </div>
+				</div>
+			</div>
+		</div>
+
+<!--End calendar modal-->
 <!--Start Script-->
 			<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 			<script src = "js/bootstrap.js"></script>
