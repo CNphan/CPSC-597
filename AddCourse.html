@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LMS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href = "css/bootstrap.min.css" rel = "stylesheet">
+		<link href = "css/styles.css" rel = "stylesheet">
+		<style>
+		a {font-family:Arial}
+		a:link{text-decoration:none}
+		a:hover{text-decoration:none;font-weight:bold}
+		a:visited{text-decoration:none}
+		a:active{text-decoration:none}
+		
+		
+		.calendarbox
+		{position:relative;top:-10px; right:0px;height:100px;width:50px}
+		
+		</style>
+		
+	</head>
+	<body>
+<!--Header-->
+		<div class = "navbar navbar-inverse navbar-static-top">
+			<div class = "container">
+				<a href = "#" class = "navbar-brand">Educate LMS</a>
+					<!-- collapse button visible on mobile-->
+					<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+						<span class = "icon-bar"></span>
+						<span class = "icon-bar"></span>
+						<span class = "icon-bar"></span>
+					</button>
+					<!-- collapse visible on mobile-->
+					<div class = "collapse navbar-collapse navHeaderCollapse">
+						<ul class = "nav navbar-nav navbar-right">
+							<li><a href ="content.html">Your are logged in as: <strong>Christie Phan</strong></a></li>
+						</ul>
+					</div>
+					   
+			</div>
+		</div>
+<!--Body-->
+<div class= "container">
+<div class= "jumbotron"><h1>Add Content</h1></div>
+
+<div class="input-group">
+  <div class="input-group-btn">
+  <button type="button" class="btn btn-default">Instructor</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">History 101</a></li>
+    <li><a href="#">English 101</a></li>
+    <li><a href="#">Software Engineering 101</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+  <input type="text" class="form-control" aria-label="...">
+</div>
+
+<div class="input-group">
+  <div class="input-group-btn">
+  <button type="button" class="btn btn-default">Course</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">History 101</a></li>
+    <li><a href="#">English 101</a></li>
+    <li><a href="#">Software Engineering 101</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+  <input type="text" class="form-control" aria-label="...">
+</div>
+
+<div class="input-group">
+  <div class="input-group-btn">
+  <button type="button" class="btn btn-default">Participants Amt</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">History 101</a></li>
+    <li><a href="#">English 101</a></li>
+    <li><a href="#">Software Engineering 101</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+  <input type="text" class="form-control" aria-label="...">
+</div>
+
+<div class="input-group">
+  <div class="input-group-btn">
+  <button type="button" class="btn btn-default">Topics Amt</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">History 101</a></li>
+    <li><a href="#">English 101</a></li>
+    <li><a href="#">Software Engineering 101</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+  <input type="text" class="form-control" aria-label="...">
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="starDate">Start Date</span>
+  <input type="date" class="form-control" placeholder="1/23/2015" aria-describedby="sizing-addon1">
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="endDate">End Date</span>
+  <input type="date" class="form-control" placeholder="1/23/2015" aria-describedby="sizing-addon1">
+</div>
+
+<br></br>
+<button class="btn btn-primary" type="button">Submit</button>
+</div><!--end container-->
+
+<!--Footer-->
+		<div class = "navbar navbar-default navbar-fixed-bottom">
+			<div class = "container">
+				<p class = "navbar-text pull-left">Site Built By Christie Phan</p>
+				<a href = "https://www.linkedin.com/in/christiephan" class = "navbar-btn btn-primary btn pull-right">LinkedIn</a>
+			</div>
+		</div>
+		
+<!-- Modal: loads last --->
+
+<!--start calendar modal-->
+<div class="modal fade" id="calendar" tabindex="-1" role="dialog" aria-labelledby="calendar" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<center><h4 class="modal-title" id="edit"> {February}, {2015}</h4></center>
+				</div>
+				<div class="modal-body">
+					<table class = "table table-bordered">
+						<tr class = "info">
+							<strong><td>Sun</td></strong>
+							<strong><td>Mon</td></strong>
+							<strong><td>Tues</td></strong>
+							<strong><td>Wed</td></strong>
+							<strong><td>Thu</td></strong>
+							<strong><td>Fri</td></strong>
+							<strong><td>Sat</td></strong>
+						</tr>
+						<tr>
+							<td class="calendarbox">1</td>
+							<td class="calendarbox">2</td>
+							<td class="calendarbox">3</td>
+							<td class="calendarbox">4</td>
+							<td class="calendarbox">5</td>
+							<td class="calendarbox">6</td>
+							<td class="calendarbox">7</td>
+						</tr>
+						<tr>
+							<td class="calendarbox">8</td>
+							<td class="calendarbox">9</td>
+							<td class="calendarbox">10</td>
+							<td class="calendarbox">11</td>
+							<td class="calendarbox">12</td>
+							<td class="calendarbox">13</td>
+							<td class="calendarbox">14</td>
+						</tr>
+						<tr>
+							<td class="calendarbox">15</td>
+							<td class="calendarbox">16</td>
+							<td class="calendarbox">17</td>
+							<td class="calendarbox">18</td>
+							<td class="calendarbox">19</td>
+							<td class="calendarbox">20</td>
+							<td class="calendarbox">21</td>
+						</tr>
+						<tr>
+							<td class="calendarbox">22</td>
+							<td class="calendarbox">23</td>
+							<td class="calendarbox">24</td>
+							<td class="calendarbox">25</td>
+							<td class="calendarbox">26</td>
+							<td class="calendarbox">27</td>
+							<td class="calendarbox">28</td>
+						</tr>
+						<tr>
+							<td class="calendarbox">29</td>
+							<td class="calendarbox">30</td>
+							<td class="calendarbox default"> </td>
+							<td class="calendarbox default"> </td>
+							<td class="calendarbox default"> </td>
+							<td class="calendarbox default"> </td>
+							<td class="calendarbox default"> </td>
+						</tr>
+					</table>
+					
+					
+				
+				</div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			  </div>
+				</div>
+			</div>
+		</div>
+<!--End calendar modal-->
+
+<!--start message modal-->
+		<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="edit">Message from {Christie} </h4>
+				</div>
+				<div class="modal-body">
+					<h4>{how are you doing today?}</h4>
+					<textarea class="form-control" rows="3" Placeholder="reply message here"></textarea>
+				
+				</div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Send</button>
+			  </div>
+				</div>
+			</div>
+		</div>
+
+<!--End message Modal-->
+<!--Start Script-->
+			<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+			<script src = "js/bootstrap.js"></script>
+		   
+	</body>
+</html>
