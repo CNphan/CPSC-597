@@ -16,7 +16,7 @@
 <table>
 	<tr>
 		<td>
-		Administrative LogIn
+		<strong>Administrative LogIn</strong>
 		</td>
 		<td><strong>
 		Teacher LogIn
