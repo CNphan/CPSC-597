@@ -45,30 +45,26 @@
 		</div>
 <!--Body-->
 <div class= "container">
-<div class= "jumbotron"><h1>Register</h1></div>
+<div class= "jumbotron"><h1>Add Participants</h1></div>
+	<div class="input-group">
+		<span class="input-group-addon" id="user_id">User ID:</span>
+		<input type="text" class="form-control" placeholder="Jane" aria-describedby="sizing-addon1"> <!--search for user_id-auto fill the rest-->
+	</div>
 	<div class="input-group">
 		<span class="input-group-addon" id="user_fName">First Name:</span>
 		<input type="text" class="form-control" placeholder="Jane" aria-describedby="sizing-addon1">
 	</div>
 	<div class="input-group">
-		<span class="input-group-addon" id="sizing-addon1">Last Name:</span>
+		<span class="input-group-addon" id="user_lName">Last Name:</span>
 		<input type="text" class="form-control" placeholder="Do" aria-describedby="sizing-addon1">
 	</div>
 	<div class="input-group">
-		<span class="input-group-addon" id="sizing-addon1">E-mail:</span>
-		<input type="text" class="form-control" placeholder="Jane@fullerton.edu" aria-describedby="sizing-addon1">
+		<span class="input-group-addon" id="user_email">E-mail:</span>
+		<input type="email" class="form-control" placeholder="Jane@fullerton.edu" aria-describedby="sizing-addon1">
 	</div>
 	<div class="input-group">
-		<span class="input-group-addon" id="sizing-addon1">City:</span>
-		<input type="text" class="form-control" placeholder="Fullerton" aria-describedby="sizing-addon1">
-	</div>
-	<div class="input-group">
-		<span class="input-group-addon" id="sizing-addon1">State:</span>
-		<input type="text" class="form-control" placeholder="CA" aria-describedby="sizing-addon1">
-	</div>
-	<div class="input-group">
-		<span class="input-group-addon" id="sizing-addon1">Country:</span>
-		<input type="text" class="form-control" placeholder="United States" aria-describedby="sizing-addon1">
+		<span class="input-group-addon" id="course_id">Course ID:</span>
+		<input type="text" class="form-control" placeholder="HIS 101" aria-describedby="sizing-addon1">
 	</div>
   <h4>Select your credential:</h4>
   <form role="form">
@@ -77,9 +73,6 @@
     </div>
     <div class="radio">
       <label><input type="radio" name="opt_teach">Teacher</label>
-    </div>
-    <div class="radio disabled">
-      <label><input type="radio" name="opt_admin" disabled>Admin</label><!--disabled for guest-->
     </div>
   </form>
 <br></br>
