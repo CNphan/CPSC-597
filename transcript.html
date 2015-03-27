@@ -158,16 +158,22 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-6 col-md-8"><strong>Cum GPA</strong></div>
 	<div class="col-xs-6 col-md-4">{4.0}</div>
-	<div class="col-xs-12 col-sm-6 col-md-8"><strong>Test/Transfer:</strong></div>
-	<div class="col-xs-6 col-md-4">{2015-05-30 }</div>
-	<div class="col-xs-12 col-sm-6 col-md-8"><strong>Degree Honors:</strong></div>
-	<div class="col-xs-6 col-md-4">{High Honor }</div>
-	<div class="col-xs-12 col-sm-6 col-md-8"><strong>Program:</strong></div>
-	<div class="col-xs-6 col-md-4">{Computer Science}</div>
+	<div class="col-xs-12 col-sm-6 col-md-8"><strong>Test:</strong></div>
+	<div class="col-xs-6 col-md-4">{Writing}</div>
 </div>
 <div>
 	<h1>Request for Transcript</h1>
-	<a href = "#"><button class="btn btn-primary" type="button">Submit</button></a> <!--Approve by admin-->
+		<form class="form-inline">
+	  <div class="form-group">
+		<label for="StudentID">Student ID:</label>
+		<input type="text" class="form-control" id="StudentID" placeholder="Student ID">
+	  </div>
+	  <div class="form-group">
+		<label for="email">Email:</label>
+		<input type="email" class="form-control" id="email" placeholder="jane.doe@example.com">
+	  </div>
+	  <button type="submit" class="btn btn-primary">Submit</button><!--Approve by admin-->
+	</form>
 </div>
 </div><!--end container-->
 
