@@ -13,70 +13,27 @@
 </ul>
 
 #### Purposed Features 
-<table>
-	<tr>
-		<td>
-		<strong>Administrative LogIn</strong>
-		</td>
-		<td><strong>
-		Teacher LogIn
-		</strong>
-		</td>
-		<td><strong>
-		Student LogIn
-		</strong></td>
-		<td><strong>
-		System LogIn
-		</strong></td>
-	</tr>
-	<tr>
-		<td>
-			<ul>
-				<li> Assign Course Content to participants (Teachers/Students)</li>
-				<li> Manage Participants</li>
-				<li> Finalize Reports</li>
-			</ul>
-		</td>
-		<td>
-			<ul>
-				<li> View Profile</li>
-				<li> View Course Schedule</li>
-				<li> View Student Info</li>
-				<li> Add content to Courses</li>
-				<li> Upload/Download Course Files</li>
-				<li> Create Assignment Submission Form</li>
-				<li> Create Exams</li>
-				<li> Post Grades</li>
-				<li> E-mail/Messaging</li>
-			</ul>
-		</td>
-		<td>
-			<ul>
-				<li> View Profile</li>
-					<ul>
-						<li>Transcript</li>
-						<li>Personal Contact Info</li>
-						<li>Current Schedule</li>
-					</ul>
-				<li> View Course Content</li>
-				<li> Download Content</li>
-				<li> Submit Assignments</li>
-				<li> View Grades</li>
-				<li> E-mail/Messaging</li>
-			</ul>
-		</td>
-		<td>
-			<ul>
-				<li> Course Content</li>
-				<li> Upload/Download Capability</li>
-				<li> User Authentication/Authorization</li>
-				<li> Export Report</li>
-				<li> Responsive</li>
-				<li> User-friendly</li>
-				<li> Dynamic</li>
-				<li> Calendar Notification (optional)</li>
-			</ul>
-		</td>
-	</tr>
-	
-</table>
+Admin | Teacher | Student | System
+----- | ------- | ------- | ------
+Assign Course Content to participants (Teacher/Students) |View Profile |View Profile |Course Content
+Manage Participants |View Course Schedule |View Transcript |Upload/Download Capability
+Finalize Reports |View Student Info |View Schedule |User Authentication/Authorization
+ |Edit Course Content |View Course Content |Report Report
+ |Post Grades |View Grades |Responsive
+ |Email/Messaging |Email/Messaging |User-friendly/Dynamic
+
+###Data
+#####User Table
+Field | Data Type | Default 
+----- | --------- | -----------
+user_id | INT | Null
+user_FName | VARCHAR |Null
+user_LName | VARCHAR | Null
+user_email | VARCHAR | Null
+user_city | VARCHAR | Null
+user_state | VARCHAR | Null
+user_country | VARCHAR | Null
+user_type | VARCHAR | Null
+user_pic | VARCHAR | Null
+degree_id | VARCHAR | Null
+course_id | VARCHAR | Null
