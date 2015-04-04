@@ -29,6 +29,7 @@ Field | Data Type | Default
 user_id | INT | Null
 user_FName | VARCHAR |Null
 user_LName | VARCHAR | Null
+username | VARCHAR | Null
 user_email | VARCHAR | Null
 user_city | VARCHAR | Null
 user_state | VARCHAR | Null
