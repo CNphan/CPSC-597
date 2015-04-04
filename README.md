@@ -30,11 +30,47 @@ user_id | INT | Null
 user_FName | VARCHAR |Null
 user_LName | VARCHAR | Null
 username | VARCHAR | Null
+user_type | ENUM | Null
 user_email | VARCHAR | Null
 user_city | VARCHAR | Null
 user_state | VARCHAR | Null
 user_country | VARCHAR | Null
-user_type | VARCHAR | Null
 user_pic | VARCHAR | Null
-degree_id | VARCHAR | Null
-course_id | VARCHAR | Null
+degree_id | INT | Null
+course_id | INT | Null
+
+#####Course Table
+Field | Data Type | Default 
+----- | --------- | -----------
+course_id | INT | Null
+course_Name | VARCHAR |Null
+course_Type | VARCHAR | Null
+course_Days | VARCHAR | Null
+course_Time | TIME | Null
+course_Unit | INT | Null
+course_startDate | DATE | Null
+course_endDate | DATE | Null
+course_Points | INT | Null
+term | VARCHAR | Null
+grades_ID | INT | Null
+
+#####Grades Table
+Field | Data Type | Default 
+----- | --------- | -----------
+grades_ID | INT | Null
+homeworks | FLOAT |Null
+quizzes | FLOAT | Null
+exams | FLOAT | Null
+project | FLOAT | Null
+final_grade | VARCHAR | Null
+
+#####Degree Table
+Field | Data Type | Default 
+----- | --------- | -----------
+degree_ID | INT | Null
+type | VARCHAR |Null
+program | VARCHAR | Null
+description | TEXT | Null
+
+
+
