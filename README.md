@@ -27,7 +27,7 @@ Finalize Reports |View Student Info |View Schedule |User Authentication/Authoriz
 Field | Data Type | Default 
 ----- | --------- | -----------
 user_id | INT | Null
-user_FName | VARCHAR |Null
+user_FName | VARCHAR |UNIQUE
 user_LName | VARCHAR | Null
 user_email | VARCHAR | Null
 user_pw | VARCHAR | Null
@@ -42,7 +42,7 @@ course_id | INT | Null
 #####Course Table
 Field | Data Type | Default 
 ----- | --------- | -----------
-course_id | INT | Null
+course_id | INT | UNIQUE
 course_Name | VARCHAR |Null
 course_Type | VARCHAR | Null
 course_Days | VARCHAR | Null
@@ -57,7 +57,7 @@ grades_ID | INT | Null
 #####Grades Table
 Field | Data Type | Default 
 ----- | --------- | -----------
-grades_ID | INT | Null
+grades_ID | INT | UNIQUE
 homeworks | FLOAT |Null
 quizzes | FLOAT | Null
 exams | FLOAT | Null
@@ -67,7 +67,7 @@ final_grade | VARCHAR | Null
 #####Degree Table
 Field | Data Type | Default 
 ----- | --------- | -----------
-degree_ID | INT | Null
+degree_ID | INT | UNIQUE
 type | VARCHAR |Null
 program | VARCHAR | Null
 description | TEXT | Null
