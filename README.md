@@ -45,12 +45,12 @@ course_id | INT(20) | Null
 #####Course Table
 Field | Data Type | Index
 ----- | --------- | -----------
-course_id | INT | UNIQUE
+course_id | INT(20) | UNIQUE
 course_Name | VARCHAR(50) |Null
 course_Type | VARCHAR(50) | Null
 course_Days | VARCHAR(50) | Null
 course_Time | TIME(50) | Null
-course_Unit | INT(50) | Null
+course_Unit | INT(30) | Null
 course_startDate | DATE(50) | Null
 course_endDate | DATE(50) | Null
 course_Points | INT(20) | Null
