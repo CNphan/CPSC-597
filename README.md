@@ -23,24 +23,27 @@ Finalize Reports |View Student Info |View Schedule |User Authentication/Authoriz
  |Email/Messaging |Email/Messaging |User-friendly/Dynamic
 
 ###Data
+#####Consideration
+######Collation : utf8_general_ci for VARCHAR DataType : not case sensitive 
+######Function for user_pw is md5
 #####User Table
-Field | Data Type | Default 
+Field | Data Type | Index 
 ----- | --------- | -----------
-user_id | INT | Null
-user_FName | VARCHAR |UNIQUE
-user_LName | VARCHAR | Null
-user_email | VARCHAR | Null
-user_pw | VARCHAR | Null
-user_type | ENUM | Null
-user_city | VARCHAR | Null
-user_state | VARCHAR | Null
-user_country | VARCHAR | Null
-user_pic | VARCHAR | Null
-degree_id | INT | Null
-course_id | INT | Null
+user_id | INT(20) | (255)
+user_FName | VARCHAR(255) |Null
+user_LName | VARCHAR(255)| Null
+user_email | VARCHAR(255)| Null
+user_pw | VARCHAR(30)| Null
+user_type | ENUM(255)| Null
+user_city | VARCHAR(255)| Null
+user_state | VARCHAR(255)| Null
+user_country | VARCHAR(255)| Null
+user_pic | VARCHAR(255) | Null
+degree_id | INT(20) | Null
+course_id | INT(20) | Null
 
 #####Course Table
-Field | Data Type | Default 
+Field | Data Type | Index
 ----- | --------- | -----------
 course_id | INT | UNIQUE
 course_Name | VARCHAR |Null
@@ -55,7 +58,7 @@ term | VARCHAR | Null
 grades_ID | INT | Null
 
 #####Grades Table
-Field | Data Type | Default 
+Field | Data Type | Index
 ----- | --------- | -----------
 grades_ID | INT | UNIQUE
 homeworks | FLOAT |Null
@@ -65,7 +68,7 @@ project | FLOAT | Null
 final_grade | VARCHAR | Null
 
 #####Degree Table
-Field | Data Type | Default 
+Field | Data Type | Index
 ----- | --------- | -----------
 degree_ID | INT | UNIQUE
 type | VARCHAR |Null
