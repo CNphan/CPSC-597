@@ -40,12 +40,12 @@ user_state | VARCHAR(50)| Null
 user_country | VARCHAR(50)| Null
 user_pic | VARCHAR(50) | Null
 degree_id | INT(20) | Null
-course_id | INT(20) | Null
+course_id | VARCHAR(50) | Null
 
 #####Course Table
 Field | Data Type | Index
 ----- | --------- | -----------
-course_id | INT(20) | UNIQUE
+course_id | VARCHAR(50) | UNIQUE
 course_Name | VARCHAR(50) |Null
 course_Type | VARCHAR(50) | Null
 course_Days | VARCHAR(50) | Null
