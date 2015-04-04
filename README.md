@@ -29,16 +29,16 @@ Finalize Reports |View Student Info |View Schedule |User Authentication/Authoriz
 #####User Table
 Field | Data Type | Index 
 ----- | --------- | -----------
-user_id | INT(20) | (255)
-user_FName | VARCHAR(255) |Null
-user_LName | VARCHAR(255)| Null
-user_email | VARCHAR(255)| Null
+user_id | INT(20) | UNIQUE
+user_FName | VARCHAR(50) |Null
+user_LName | VARCHAR(50)| Null
+user_email | VARCHAR(50)| Null
 user_pw | VARCHAR(30)| Null
-user_type | ENUM(255)| Null
-user_city | VARCHAR(255)| Null
-user_state | VARCHAR(255)| Null
-user_country | VARCHAR(255)| Null
-user_pic | VARCHAR(255) | Null
+user_type | ENUM(30)| Null
+user_city | VARCHAR(50)| Null
+user_state | VARCHAR(50)| Null
+user_country | VARCHAR(50)| Null
+user_pic | VARCHAR(50) | Null
 degree_id | INT(20) | Null
 course_id | INT(20) | Null
 
@@ -46,34 +46,34 @@ course_id | INT(20) | Null
 Field | Data Type | Index
 ----- | --------- | -----------
 course_id | INT | UNIQUE
-course_Name | VARCHAR |Null
-course_Type | VARCHAR | Null
-course_Days | VARCHAR | Null
-course_Time | TIME | Null
-course_Unit | INT | Null
-course_startDate | DATE | Null
-course_endDate | DATE | Null
-course_Points | INT | Null
-term | VARCHAR | Null
-grades_ID | INT | Null
+course_Name | VARCHAR(50) |Null
+course_Type | VARCHAR(50) | Null
+course_Days | VARCHAR(50) | Null
+course_Time | TIME(50) | Null
+course_Unit | INT(50) | Null
+course_startDate | DATE(50) | Null
+course_endDate | DATE(50) | Null
+course_Points | INT(20) | Null
+term | VARCHAR(50) | Null
+grades_ID | INT(20) | Null
 
 #####Grades Table
 Field | Data Type | Index
 ----- | --------- | -----------
-grades_ID | INT | UNIQUE
-homeworks | FLOAT |Null
-quizzes | FLOAT | Null
-exams | FLOAT | Null
-project | FLOAT | Null
-final_grade | VARCHAR | Null
+grades_ID | INT(20) | UNIQUE
+homeworks | FLOAT(30) |Null
+quizzes | FLOAT(30) | Null
+exams | FLOAT(30) | Null
+project | FLOAT(30) | Null
+final_grade | VARCHAR(50)| Null
 
 #####Degree Table
 Field | Data Type | Index
 ----- | --------- | -----------
-degree_ID | INT | UNIQUE
-type | VARCHAR |Null
-program | VARCHAR | Null
-description | TEXT | Null
+degree_ID | INT(20) | UNIQUE
+type | VARCHAR(100) |Null
+program | VARCHAR(100) | Null
+description | TEXT(300) | Null
 
 
 
