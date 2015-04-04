@@ -30,6 +30,7 @@ user_id | INT | Null
 user_FName | VARCHAR |Null
 user_LName | VARCHAR | Null
 user_email | VARCHAR | Null
+user_pw | VARCHAR | Null
 user_type | ENUM | Null
 user_city | VARCHAR | Null
 user_state | VARCHAR | Null
