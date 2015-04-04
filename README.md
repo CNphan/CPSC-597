@@ -55,12 +55,12 @@ course_startDate | DATE(50) | Null
 course_endDate | DATE(50) | Null
 course_Points | INT(20) | Null
 term | VARCHAR(50) | Null
-grades_ID | INT(20) | Null
+grades_id | INT(20) | Null
 
 #####Grades Table
 Field | Data Type | Index
 ----- | --------- | -----------
-grades_ID | INT(20) | UNIQUE
+grades_id | INT(20) | UNIQUE
 homeworks | FLOAT(30) |Null
 quizzes | FLOAT(30) | Null
 exams | FLOAT(30) | Null
@@ -70,7 +70,7 @@ final_grade | VARCHAR(50)| Null
 #####Degree Table
 Field | Data Type | Index
 ----- | --------- | -----------
-degree_ID | INT(20) | UNIQUE
+degree_id | INT(20) | UNIQUE
 type | VARCHAR(100) |Null
 program | VARCHAR(100) | Null
 description | TEXT(300) | Null
