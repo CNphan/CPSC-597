@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+    $role = $_SESSION['sess_userrole'];
+    if(!isset($_SESSION['sess_username']) && $role!="admin"){
+      header('Location: index.php?err=2');
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -27,7 +35,7 @@
 <!--Header-->
 		<div class = "navbar navbar-inverse navbar-static-top">
 			<div class = "container">
-				<a href = "#" class = "navbar-brand">Educate LMS</a>
+				<a href = "#" class = "navbar-brand">Logged In As: <?php echo $_SESSION['sess_username'];?></a>
 					<!-- collapse button visible on mobile-->
 					<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
 						<span class = "icon-bar"></span>
@@ -37,7 +45,7 @@
 					<!-- collapse visible on mobile-->
 					<div class = "collapse navbar-collapse navHeaderCollapse">
 						<ul class = "nav navbar-nav navbar-right">
-							<li><a href ="content.html">Your are logged in as: <strong>Christie Phan</strong></a></li>
+							<li><a href = "#logout" data-toggle="modal">LogOut</a></li>
 						</ul>
 					</div>
 					   
@@ -137,7 +145,7 @@
   <input type="date" class="form-control" placeholder="1/23/2015" aria-describedby="sizing-addon1">
 </div>
 <br></br>
-<button class="btn btn-primary" type="button">Submit</button>
+<a href="admin_add_ccc.php"><button class="btn btn-primary" type="button">Submit</button></a><!--link to Admin add course content confirm-->
 </div><!--end container-->
 
 <!--Footer-->
@@ -149,7 +157,22 @@
 		</div>
 		
 <!-- Modal: loads last --->
-
+<!--Log out modal-->
+<div class = "modal fade" tabindex="-1" id = "logout" role = "dialog">
+			<div class = "modal-dialog modal-sm">
+				<div class = "modal-content">
+					<form class = "form-horizontal">
+						<div class = "modal-header">
+							<center><h4>Do you want to log out?</h4></center>
+						</div>
+						<div class = "modal-body">
+							<center><a  class = "btn btn-primary " href="index.php">Yes</a>
+							<a  class = "btn btn-default " data-dismiss = "modal">No</a></center>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div> <!--end log out modal-->
 <!--Start Script-->
 			<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 			<script src = "js/bootstrap.js"></script>

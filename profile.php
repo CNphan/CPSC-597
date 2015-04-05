@@ -1,3 +1,14 @@
+<?php 
+	require 'database-config.php';
+    session_start();
+    $role = $_SESSION['sess_userrole'];
+    if(((!isset($_SESSION['sess_username']) && $role!="student")) || (!isset($_SESSION['sess_username']) && $role!="admin") || (!isset($_SESSION['sess_username']) && $role!="teacher"))
+	{
+      header('Location: index.php?err=2');
+    }
+	
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,7 +25,7 @@
 <!--Header-->
 		<div class = "navbar navbar-inverse navbar-static-top">
 			<div class = "container">
-				<a href = "#" class = "navbar-brand">Educate LMS</a>
+				<a href = "#" class = "navbar-brand">Logged In As: <?php echo $_SESSION['sess_username'];?></a>
 					<!-- collapse button visible on mobile-->
 					<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
 						<span class = "icon-bar"></span>
@@ -32,7 +43,7 @@
 		</div>
 <!--Body-->
 <center><div class= "container">
-		<h1>Welcome {Christie Phan}{Id #}</h1>
+		<h1>Welcome <?php echo $_SESSION['sess_userFName'];?> <?php echo $_SESSION['sess_userLName'];?></h1>
 <!--start general-->
 	<div class="panel panel-info">
 		<div class="panel-heading" role="tab" id="generalInfo">
@@ -47,29 +58,28 @@
 			
 			<div class="input-group">
  				<span class="input-group-addon" id="sizing-addon1">First Name:</span>
-  				<input type="text" class="form-control" placeholder="Jane" aria-describedby="sizing-addon1">
+  				<input type="text" class="form-control" placeholder="<?php echo $_SESSION['sess_userFName'];?>" aria-describedby="sizing-addon1">
 			</div>
 			<div class="input-group">
  				<span class="input-group-addon" id="sizing-addon1">Last Name:</span>
-  				<input type="text" class="form-control" placeholder="Do" aria-describedby="sizing-addon1">
+  				<input type="text" class="form-control" placeholder="<?php echo $_SESSION['sess_userLName'];?>" aria-describedby="sizing-addon1">
 			</div>
 			<div class="input-group">
  				<span class="input-group-addon" id="sizing-addon1">E-mail:</span>
-  				<input type="text" class="form-control" placeholder="Jane@fullerton.edu" aria-describedby="sizing-addon1">
+  				<input type="text" class="form-control" placeholder="<?php echo $_SESSION['sess_userEmail'];?>" aria-describedby="sizing-addon1">
 			</div>
 			<div class="input-group">
  				<span class="input-group-addon" id="sizing-addon1">City:</span>
-  				<input type="text" class="form-control" placeholder="Fullerton" aria-describedby="sizing-addon1">
+  				<input type="text" class="form-control" placeholder="<?php echo $_SESSION['sess_userCity'];?>" aria-describedby="sizing-addon1">
 			</div>
 			<div class="input-group">
  				<span class="input-group-addon" id="sizing-addon1">State:</span>
-  				<input type="text" class="form-control" placeholder="CA" aria-describedby="sizing-addon1">
+  				<input type="text" class="form-control" placeholder="<?php echo $_SESSION['sess_userState'];?>" aria-describedby="sizing-addon1">
 			</div>
 			<div class="input-group">
  				<span class="input-group-addon" id="sizing-addon1">Country:</span>
-  				<input type="text" class="form-control" placeholder="United States" aria-describedby="sizing-addon1">
+  				<input type="text" class="form-control" placeholder="<?php echo $_SESSION['sess_userCountry'];?>" aria-describedby="sizing-addon1">
 			</div>
-			
 			
 			
 			</div><!--end general body-->
@@ -183,3 +193,4 @@
 		   
 	</body>
 </html>
+

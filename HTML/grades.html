@@ -1,10 +1,5 @@
-<?php
-include_once "connect.php";
-$sql="SELECT * FROM grade";
-$sql="SELECT * FROM user";
-$records=mysql_query($sql);
-?>
-<!DOCTYPE html>
+
+<!DOCTYPE html> <!--credentials: teacher-->
 <html>
 	<head>
 		<title>Grades</title>
@@ -26,7 +21,7 @@ $records=mysql_query($sql);
 					<!-- collapse visible on mobile-->
 					<div class = "collapse navbar-collapse navHeaderCollapse">
 						<ul class = "nav navbar-nav navbar-right">
-							<li><a href ="content.html">Your are logged in as: <strong>Christie Phan</strong></a></li>
+							<li><a href = "#logout" data-toggle="modal">LogOut</a></li>
 						</ul>
 					</div>
 					   
@@ -73,17 +68,6 @@ $records=mysql_query($sql);
 		<td class="success">
 			<div class="col-sm-3" ><strong> Final Grade</strong></div>
 		</td>
-		<?php
-		while($grade=mysql_fetch_assoc($records))
-		{
-		echo "<tr>";
-		echo "<td>".$grade['homeworks']."</td>";
-		echo "<td>".$grade['quizzes']."</td>";
-		echo "<td>".$grade['projects']."</td>";
-		echo "<td>".$grade['final']."</td>";
-		echo "</tr>";
-		}
-		?>
 		<td class="success">
 			<button type="button" class="btn btn-success"><strong>Edit</strong></button>
 		</td>
@@ -171,7 +155,22 @@ $records=mysql_query($sql);
 		</div>
 		
 <!-- Modal: loads last --->
-<!--Edit modal-->
+<!--Log out modal-->
+<div class = "modal fade" tabindex="-1" id = "logout" role = "dialog">
+			<div class = "modal-dialog modal-sm">
+				<div class = "modal-content">
+					<form class = "form-horizontal">
+						<div class = "modal-header">
+							<center><h4>Do you want to log out?</h4></center>
+						</div>
+						<div class = "modal-body">
+							<center><a  class = "btn btn-primary " href="index.php">Yes</a>
+							<a  class = "btn btn-default " data-dismiss = "modal">No</a></center>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div> <!--end log out modal-->
 <!--End modal-->
 <!--Start Script-->
 			<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

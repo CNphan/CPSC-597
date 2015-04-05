@@ -1,10 +1,21 @@
 <?php
-$db_host = "localhost";
-$db_username = "root";
-$db_pass = "";
-$db_name = "lms";
+mysql_connect ("localhost","root","");
+	mysql_select_db("lms");
+	
+	 // fetch tables and assign variables to values 
+   $courseTable = mysql_query("SELECT * FROM course ORDER BY course_id ASC");
 
-@mysql_connect("$db_host","$db_username","$db_pass") or die ("Could not connect to mysql");
-@mysql_select_db("$db_name") or die ("No database");
-
+   
+   // assign variables 
+	$course_id ='course_id';
+	$course_Name = 'course_Name';
+	$course_Type = 'course_Type';
+	$course_Days = 'course_Days';
+	$course_Unit = 'course_Unit';
+	$course_startDate = 'course_startDate';
+	$course_points = 'course_Points';
+	$course_term = 'term';
+	$course_grade = 'grades_id';
+	
+	$courseTableRows = mysql_fetch_assoc($courseTable); // returns the array
 ?>

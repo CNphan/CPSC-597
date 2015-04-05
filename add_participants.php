@@ -1,3 +1,11 @@
+<?php 
+    session_start();
+    $role = $_SESSION['sess_userrole'];
+    if(!isset($_SESSION['sess_username']) && $role!="admin"){
+      header('Location: index.php?err=2');
+    }
+?>
+
 <!DOCTYPE html><!--Credentials:guest,student,teacher,admin -->
 <html>
 	<head>
@@ -27,7 +35,7 @@
 <!--Header-->
 		<div class = "navbar navbar-inverse navbar-static-top">
 			<div class = "container">
-				<a href = "#" class = "navbar-brand">Educate LMS</a>
+				<a href = "#" class = "navbar-brand">Logged In As: <?php echo $_SESSION['sess_username'];?></a>
 					<!-- collapse button visible on mobile-->
 					<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
 						<span class = "icon-bar"></span>
@@ -37,7 +45,7 @@
 					<!-- collapse visible on mobile-->
 					<div class = "collapse navbar-collapse navHeaderCollapse">
 						<ul class = "nav navbar-nav navbar-right">
-							<li><a href ="content.html">Your are logged in as: <strong>Christie Phan</strong></a></li>
+							<li><a href = "#logout" data-toggle="modal">LogOut</a></li>
 						</ul>
 					</div>
 					   
@@ -66,7 +74,7 @@
 		<span class="input-group-addon" id="course_id">Course ID:</span>
 		<input type="text" class="form-control" placeholder="HIS 101" aria-describedby="sizing-addon1">
 	</div>
-  <h4>Select your credential:</h4>
+  <h4>Select credential:</h4>
   <form role="form">
     <div class="radio">
       <label><input type="radio" name="opt_stu">Student</label>
@@ -88,7 +96,22 @@
 		</div>
 		
 <!-- Modal: loads last --->
-
+<!--Log out modal-->
+<div class = "modal fade" tabindex="-1" id = "logout" role = "dialog">
+			<div class = "modal-dialog modal-sm">
+				<div class = "modal-content">
+					<form class = "form-horizontal">
+						<div class = "modal-header">
+							<center><h4>Do you want to log out?</h4></center>
+						</div>
+						<div class = "modal-body">
+							<center><a  class = "btn btn-primary " href="index.php">Yes</a>
+							<a  class = "btn btn-default " data-dismiss = "modal">No</a></center>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div> <!--end log out modal-->
 <!--Start Script-->
 			<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 			<script src = "js/bootstrap.js"></script>
