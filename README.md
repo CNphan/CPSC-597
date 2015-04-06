@@ -39,8 +39,8 @@ user_city | VARCHAR(50)| Null
 user_state | VARCHAR(50)| Null
 user_country | VARCHAR(50)| Null
 user_pic | VARCHAR(50) | Null
-degree_id | INT(20) | Null
-course_id | VARCHAR(50) | Null
+degree_type | VARCHAR(50) | Null
+course_program | VARCHAR(50) | Null
 
 #####Course Table
 Field | Data Type | Index
@@ -53,7 +53,6 @@ course_Time | TIME(6) | Null
 course_Unit | INT(30) | Null
 course_startDate | DATE(50) | Null
 course_endDate | DATE(50) | Null
-course_Points | INT(20) | Null
 term | VARCHAR(50) | Null
 grades_id | INT(20) | Null
 
@@ -67,13 +66,6 @@ exams | FLOAT(30) | Null
 project | FLOAT(30) | Null
 final_grade | VARCHAR(50)| Null
 
-#####Degree Table
-Field | Data Type | Index
------ | --------- | -----------
-degree_id | INT(20) | UNIQUE
-type | VARCHAR(100) |Null
-program | VARCHAR(100) | Null
-description | TEXT(300) | Null
 
 
 
