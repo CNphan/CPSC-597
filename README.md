@@ -32,8 +32,9 @@ Field | Data Type | Index
 user_id | INT(20) | UNIQUE
 user_FName | VARCHAR(50) |Null
 user_LName | VARCHAR(50)| Null
-user_email | VARCHAR(50)| Null
+username | VARCHAR(50)| Null
 user_pw | VARCHAR(30)| Null
+user_email | VARCHAR(50)| Null
 user_type | ENUM(30)| Null
 user_city | VARCHAR(50)| Null
 user_state | VARCHAR(50)| Null
@@ -45,15 +46,18 @@ course_program | VARCHAR(50) | Null
 #####Course Table
 Field | Data Type | Index
 ----- | --------- | -----------
-course_id | VARCHAR(50) | UNIQUE
-course_Name | VARCHAR(50) |Null
-course_Type | VARCHAR(50) | Null
-course_Days | VARCHAR(50) | Null
-course_Time | TIME(6) | Null
-course_Unit | INT(30) | Null
+id | INT(20) | UNIQUE
+course_id | VARCHAR(50) | Null
+course_name | VARCHAR(50) |Null
+course_type | VARCHAR(50) | Null
+course_days | VARCHAR(50) | Null
+course_time | TIME(6) | Null
+course_unit | INT(30) | Null
 course_startDate | DATE(50) | Null
 course_endDate | DATE(50) | Null
+course_loc | VARCHAR(50) | Null
 term | VARCHAR(50) | Null
+user_id | INT(20) | Null
 grades_id | INT(20) | Null
 
 #####Grades Table
@@ -65,6 +69,7 @@ quizzes | FLOAT(30) | Null
 exams | FLOAT(30) | Null
 project | FLOAT(30) | Null
 final_grade | VARCHAR(50)| Null
+user_id | INT(20) | Null
 
 
 
