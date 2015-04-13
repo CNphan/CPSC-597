@@ -7,30 +7,7 @@
     }
 	mysql_connect("localhost", "root", "") or die(mysql_error()); 
 	mysql_select_db("lms") or die(mysql_error()); 
-	/*$data = mysql_query("SELECT user.username,course.course_name FROM 'user' INNER JOIN 'course' on user.course_id = course.course_id");
-	
-	$course_id = 'course_id';
-	$course_name = 'course_Name';
-	$course_type = 'course_Type';
-	$course_days = 'course_Days';
-	$course_unit = 'course_Unit';
-	$course_startDate = 'course_startDate';
-	$course_endDate = 'course_endDate';
-	$course_points = 'course_Points';
-	$course_term = 'term';
-	$course_grades = 'grades_id';
 
-	$rows = mysql_fetch_assoc($data);
-	echo $rows['course_Name'];  
-	
-	$detail = " SELECT user.username, course.course_name 
-				FROM 'user', 'course'
-				WHERE user.course_id = course.course_id AND
-				user.course_id = $courseID";
-				
-				$courseID = $_GET[course_id];
-				
-*/
 
 	
 ?>

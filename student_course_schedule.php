@@ -1,9 +1,47 @@
 <?php 
-    session_start();
+	mysql_connect("localhost","root","");
+	mysql_select_db("lms");
+	
+	session_start();
     $role = $_SESSION['sess_userrole'];
     if(!isset($_SESSION['sess_username']) && $role!="student"){
       header('Location: index.php?err=2');
     }
+
+	//$result = mysql_query("SELECT * FROM course AS c INNER JOIN user as u ON c.course_id = u.course_id");
+	
+	$result = mysql_query("SELECT course.course_id,course.course_name,course.course_type,course.course_days,course.course_time,course.course_unit,course.course_startDate,course.course_endDate,course.course_loc,course.course_inst,user.user_id
+							FROM course
+							JOIN user_course on course.course_id = user_course.course_id
+							JOIN user on user.user_id = user_course.user_id
+							");
+	
+	
+	$courseN ='course_name';
+	$courseT ='course_type';
+	$courseD ='course_days';
+	$courseTime ='course_time';
+	$courseU ='course_unit';
+	$courseStD ='course_startDate';
+	$courseEnD ='course_endDate';
+	$courseloc ='course_loc';
+	$courseI ='course_inst';
+	$name = 'user_id';
+	
+	if (!$result)
+	{
+		die("Invalid query:".mysql_error());
+	}
+	
+	// single row
+	$row = mysql_fetch_array($result);
+	
+	// multiple rows
+	/*while(($row = mysql_fetch_assoc($result)) !== FALSE)
+	{
+	echo 'Name:'.$row[$courseN].'userID:'.$row[$name];
+	echo "<br>";
+	}*/
 ?>
 
 <!DOCTYPE html><!--Credentials:student,teacher,admin -->
@@ -58,48 +96,48 @@
   <table class="table">
     <tr>
 		<td class="success">
-			<div class="col-sm-3" ><strong> COURSE ID</strong> </div>
+			<div><strong> COURSE NAME</strong> </div>
 		</td>
 		<td class="success">
-			<div class="col-sm-3" ><strong> TYPES</strong> </div>
+			<div><strong> TYPES</strong> </div>
 		</td>
 		<td class="success">
-			<div class="col-sm-3" ><strong> DAYS</strong></div>
+			<div><strong> DAYS</strong></div>
 		</td>
 		<td class="success">
-			<div class="col-sm-3" ><strong> TIME</strong></div>
+			<div><strong> TIME</strong></div>
 		</td>
 		<td class="success">
-			<div class="col-sm-3" ><strong> UNITS</strong></div>
+			<div><strong> UNITS</strong></div>
 		</td>
 		<td class="success">
-			<div class="col-sm-3" ><strong> LOC</strong></div>
+			<div><strong> LOC</strong></div>
 		</td>
 		<td class="success">
-			<div class="col-sm-3" ><strong> INST</strong></div> <!--stu = loc, inst=roll-->
+			<div><strong> INST</strong></div> <!--stu = loc, inst=roll-->
 		</td>
 	</tr>
 	<tr>
 		<td>
-			<div class="col-sm-3" > HIS101</div>
+			<?php echo '<div>'.$row[$courseN].'</div>'?>
 		</td>
 		<td>
-			<div class="col-sm-3" > SEM </div>
+			<?php echo '<div>'.$row[$courseT].'</div>'?>
 		</td>
 		<td>
-			<div class="col-sm-3" > M,W,F </div>
+			<?php echo '<div>'.$row[$courseD].'</div>'?>
 		</td>
 		<td>
-			<div class="col-sm-3" > 10AM-12:45PM </div>
+			<?php echo '<div>'.$row[$courseTime].'</div>'?>
 		</td>
 		<td>
-			<div class="col-sm-3" > 3 </div>
+			<?php echo '<div>'.$row[$courseU].'</div>'?>
 		</td>
 		<td>
-			<div class="col-sm-3" > LAC 101 </div>
+			<?php echo '<div>'.$row[$courseloc].'</div>'?>
 		</td>
 		<td>
-			<div class="col-sm-3" > Phan </div>
+			<?php echo '<div>'.$row[$courseI].'</div>'?>
 		</td>
 	</tr>
   </table>
