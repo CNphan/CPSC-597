@@ -7,10 +7,10 @@
     if(!isset($_SESSION['sess_username']) && $role!="student"){
       header('Location: index.php?err=2');
     }
-
+	
 	//$result = mysql_query("SELECT * FROM course AS c INNER JOIN user as u ON c.course_id = u.course_id");
 	
-	$result = mysql_query("SELECT course.course_id,course.course_name,course.course_type,course.course_days,course.course_time,course.course_unit,course.course_startDate,course.course_endDate,course.course_loc,course.course_inst,user.user_id
+	$result = mysql_query("SELECT course.course_id, course.course_name,course.course_type,course.course_days,course.course_time,course.course_unit,course.course_startDate,course.course_endDate,course.course_loc,course.course_inst,user.user_id
 							FROM course
 							JOIN user_course on course.course_id = user_course.course_id
 							JOIN user on user.user_id = user_course.user_id
@@ -26,7 +26,6 @@
 	$courseEnD ='course_endDate';
 	$courseloc ='course_loc';
 	$courseI ='course_inst';
-	$name = 'user_id';
 	
 	if (!$result)
 	{
@@ -36,11 +35,11 @@
 	// single row
 	$row = mysql_fetch_array($result);
 	
-	// multiple rows
-	/*while(($row = mysql_fetch_assoc($result)) !== FALSE)
+	// multiple rows- doesn't work 
+	/*while(($row = mysql_fetch_array($result)) !== FALSE)
 	{
-	echo 'Name:'.$row[$courseN].'userID:'.$row[$name];
-	echo "<br>";
+		echo 'Name:'.$row[$courseN];
+		echo '<br>';
 	}*/
 ?>
 

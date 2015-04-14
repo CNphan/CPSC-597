@@ -4,6 +4,7 @@
     if(!isset($_SESSION['sess_username']) && $role!="student"){
       header('Location: index.php?err=2');
     }
+
 ?>
 <!DOCTYPE html> <!--credentials: teacher-->
 <html>

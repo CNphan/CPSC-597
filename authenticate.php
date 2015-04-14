@@ -86,6 +86,9 @@
 			header('Location: student_content.php');
 		}
 	}
+	
+	// set query for course table - set session 
+	
 
 	
 ?>
