@@ -1,10 +1,12 @@
 <?php 
-    session_start();
+    mysql_connect("localhost","root","");
+	mysql_select_db("lms");
+	session_start();
     $role = $_SESSION['sess_userrole'];
     if(!isset($_SESSION['sess_username']) && $role!="student"){
       header('Location: index.php?err=2');
     }
-
+	
 ?>
 <!DOCTYPE html> <!--credentials: teacher-->
 <html>

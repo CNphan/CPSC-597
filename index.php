@@ -20,10 +20,27 @@
   <body>
     <div class="container">
       <div class="info">
-         <h2 class="bg-primary"><center>Welcome Educate LMS</center></h2>
-       
+         <h2 class="bg-primary"><center>Welcome to Educate LMS</center></h2>
+	   <table class ="table table-bordered">
+		<tr>
+			<td class="info"><strong>Username</strong></td>
+			<td class="info"><strong>Password</strong></td>
+		</tr>
+		<tr>
+			<td> admin </td>
+			<td> admin</td>
+		</tr>
+		<tr>
+			<td> teacher </td>
+			<td> teacher</td>
+		</tr>
+		<tr>
+			<td> student </td>
+			<td> student</td>
+		</tr>
+	   </table>
           <div class="col-md-6 col-md-offset-3">
-                    <h4></span><center>Log in with your credentials<span class="glyphicon glyphicon-user"></center></h4><br/>
+                    <h4></span><center>Log in with your credentials <span class="glyphicon glyphicon-user"></center></h4><br/>
                             <div class="block-margin-top">
                               <center>
 							  <?php 

@@ -63,7 +63,7 @@
 			</div>
 			<div id="admin" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading00">
 			  <div class="panel-body">
-				<a href = "teacher_grades.php"<button type="button" class="btn btn-success">
+				<a href = "teacher_gradesUp.php"<button type="button" class="btn btn-success">
 				<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Grades</button></a>
 			  </div>
 			</div>

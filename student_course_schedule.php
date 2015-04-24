@@ -8,14 +8,11 @@
       header('Location: index.php?err=2');
     }
 	
-	//$result = mysql_query("SELECT * FROM course AS c INNER JOIN user as u ON c.course_id = u.course_id");
-	
 	$result = mysql_query("SELECT course.course_id, course.course_name,course.course_type,course.course_days,course.course_time,course.course_unit,course.course_startDate,course.course_endDate,course.course_loc,course.course_inst,user.user_id
 							FROM course
 							JOIN user_course on course.course_id = user_course.course_id
 							JOIN user on user.user_id = user_course.user_id
 							");
-	
 	
 	$courseN ='course_name';
 	$courseT ='course_type';
@@ -36,7 +33,7 @@
 	$row = mysql_fetch_array($result);
 	
 	// multiple rows- doesn't work 
-	/*while(($row = mysql_fetch_array($result)) !== FALSE)
+/*while(($row = mysql_fetch_array($result)) !== FALSE)
 	{
 		echo 'Name:'.$row[$courseN];
 		echo '<br>';
@@ -72,7 +69,7 @@
 <!--Header-->
 		<div class = "navbar navbar-inverse navbar-static-top">
 			<div class = "container">
-				<a href = "#" class = "navbar-brand">Logged In As: <?php echo $_SESSION['sess_username'];?></a>
+				<a href = "student_content.php" class = "navbar-brand">Logged In As: <?php echo $_SESSION['sess_username'];?></a>
 					<!-- collapse button visible on mobile-->
 					<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
 						<span class = "icon-bar"></span>

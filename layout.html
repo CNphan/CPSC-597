@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!--credentials: teacher-->
+<html>
+	<head>
+		<title>Grades</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href = "css/bootstrap.min.css" rel = "stylesheet">
+		<link href = "css/styles.css" rel = "stylesheet">
+	</head>
+	<body>
+<!--Header-->
+		<div class = "navbar navbar-inverse navbar-static-top">
+			<div class = "container">
+				<a href = "teacher_content.php" class = "navbar-brand">Logged In As: <?php echo $_SESSION['sess_username'];?></a>
+					<!-- collapse button visible on mobile-->
+					<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+						<span class = "icon-bar"></span>
+						<span class = "icon-bar"></span>
+						<span class = "icon-bar"></span>
+					</button>
+					<!-- collapse visible on mobile-->
+					<div class = "collapse navbar-collapse navHeaderCollapse">
+						<ul class = "nav navbar-nav navbar-right">
+							<li><a href = "#logout" data-toggle="modal">LogOut</a></li>
+						</ul>
+					</div>
+					   
+			</div>
+		</div>
+<!--Footer-->
+		<div class = "navbar navbar-default navbar-fixed-bottom">
+			<div class = "container">
+				<p class = "navbar-text pull-left">Site Built By Christie Phan</p>
+				<a href = "https://www.linkedin.com/in/christiephan" class = "navbar-btn btn-primary btn pull-right">LinkedIn</a>
+			</div>
+		</div>
+		
+<!-- Modal: loads last --->
+<!--Log out modal-->
+<div class = "modal fade" tabindex="-1" id = "logout" role = "dialog">
+			<div class = "modal-dialog modal-sm">
+				<div class = "modal-content">
+					<form class = "form-horizontal">
+						<div class = "modal-header">
+							<center><h4>Do you want to log out?</h4></center>
+						</div>
+						<div class = "modal-body">
+							<center><a  class = "btn btn-primary " href="index.php">Yes</a>
+							<a  class = "btn btn-default " data-dismiss = "modal">No</a></center>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div> <!--end log out modal-->
+<!--End modal-->
+<!--Start Script-->
+			<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+			<script src = "js/bootstrap.js"></script>
+		   
+	</body>
+</html>

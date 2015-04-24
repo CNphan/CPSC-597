@@ -4,6 +4,14 @@
     if(!isset($_SESSION['sess_username']) && $role!="teacher"){
       header('Location: index.php?err=2');
     }
+	
+	// variables 
+	$h = $_GET["homework"];
+	$q = $_GET["quiz"];
+	$e = $_GET["exam"];
+	$f = $_GET["exam"];
+	$letterGrade = ($h+$q+$e+$f)/4;
+	
 ?>
 <!DOCTYPE html> <!--credentials: teacher-->
 <html>
@@ -73,6 +81,9 @@
 			<div class="col-sm-3" ><strong> Exams</strong></div>
 		</td>
 		<td class="success">
+			<div class="col-sm-3" ><strong> Final</strong></div>
+		</td>
+		<td class="success">
 			<div class="col-sm-3" ><strong> Final Grade</strong></div>
 		</td>
 	</tr>
@@ -84,20 +95,35 @@
 			<div class="col-sm-3" > {Christie} </div>
 		</td>
 		<td>
-			<div class="col-sm-3" ><input type="text" class="form-control" name = "homework" placeholder="100"></div>
+			<div class="col-sm-3" ><?php echo $_GET["homework"];?></div>
 		</td>
 		<td>
-			<div class="col-sm-3" ><input type="text" class="form-control" name = "quiz" placeholder="100"> </div>
+			<div class="col-sm-3" ><?php echo $_GET["quiz"];?></div>
 		</td>
 		<td>
-			<div class="col-sm-3" ><input type="text" class="form-control" name = "exam" placeholder="100"></div>
+			<div class="col-sm-3" ><?php echo $_GET["exam"];?></div>
 		</td>
 		<td>
-			<div class="col-sm-3" ><input type="text" class="form-control" name = "final" placeholder="100"></div>
+			<div class="col-sm-3" ><?php echo $_GET["final"];?></div>
+		</td>
+		<td>
+			<div class="col-sm-3" >
+			<?php 
+			if ($letterGrade >=90) 
+			{
+					echo 'A';
+			}
+			else
+			{
+				echo 'Fail';
+			}
+			?>
+			
+			</div>
 		</td>
 	</tr>
   </table>
-  <center><input type="submit" class="btn btn-primary"></center>
+  <center><a href = "teacher_grades.php"<button type="button" class="btn btn-info"> Edit </button></a></center>
   </form>
 </div>
 </div><!--End Row-->
