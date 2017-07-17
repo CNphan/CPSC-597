@@ -25,7 +25,7 @@ More documentation to come...
    $pass = ''; //fill in the password information from MySQL here  
 ```
 ### Start Environment  
-1. Run Xampp  
+1. Run [XAMPP](https://www.apachefriends.org/index.html)
 2. Start Apache & MySQL  
 3. Open a web browser  
 4. Type in the host name & the name of the project  
