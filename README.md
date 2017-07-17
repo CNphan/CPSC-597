@@ -1,5 +1,5 @@
 # Mini-Learning Management System
-This is my Graduate Project-mini LMS system. I am currently working on the documentation of this project. 
+More documentation to come...
 
 ## Installation/ Environment Set Up 
 
