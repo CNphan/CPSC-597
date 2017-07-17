@@ -23,7 +23,7 @@ This is my Graduate Project-mini LMS system. I am currently working on the docum
    $user = 'root'; //fill in the user information from MySQL here 
    $pass = ''; //fill in the password information from MySQL here  
 
-###Start Environment  
+### Start Environment  
 1. Run Xampp  
 2. Start Apache & MySQL  
 3. Open a web browser  
