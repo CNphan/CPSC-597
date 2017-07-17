@@ -26,7 +26,7 @@ More documentation to come...
 ```
 ### Start Environment  
 1. Run [XAMPP](https://www.apachefriends.org/index.html)
-2. Start Apache & MySQL  
+2. Start [Apache](https://www.apache.org/) & [MySQL](https://www.mysql.com/)
 3. Open a web browser  
 4. Type in the host name & the name of the project  
    Example: http://localhost/project/  
