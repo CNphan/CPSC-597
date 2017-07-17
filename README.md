@@ -18,11 +18,12 @@ This is my Graduate Project-mini LMS system. I am currently working on the docum
 4. Navigate to <your git cone repository> Project\database-config.php  
 5. Open the database-config.php file  
 6. Fill in the following information:  
+```
    $database = 'lms2'; //  fill in the database name here  
    $host = 'localhost'; // fill in the host name here  
    $user = 'root'; //fill in the user information from MySQL here 
    $pass = ''; //fill in the password information from MySQL here  
-
+```
 ### Start Environment  
 1. Run Xampp  
 2. Start Apache & MySQL  
