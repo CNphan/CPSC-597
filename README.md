@@ -1,4 +1,4 @@
-# CPSC-597
+# Mini-Learning Management System
 This is my Graduate Project-mini LMS system. I am currently working on the documentation of this project. 
 
 ## Installation/ Environment Set Up 
