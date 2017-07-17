@@ -9,7 +9,7 @@ More documentation to come...
 3. Clone Repository  
 4. Open Git Shell  
 5. Navigate to the destination you want to clone the repository to  
-6. Type in git clone https://github.com/CNphan/CPSC-597.git  
+6. Type in ```git clone https://github.com/CNphan/CPSC-597.git  ```
 
 ### Database set up  
 1. Open MySQL 
