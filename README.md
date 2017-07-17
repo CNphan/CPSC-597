@@ -21,7 +21,7 @@ More documentation to come...
 ```php
    $database = 'lms2'; //  fill in the database name here  
    $host = 'localhost'; // fill in the host name here  
-   $user = 'root'; //fill in the user information from MySQL here 
+   $user = 'root'; //fill in the username from MySQL here 
    $pass = ''; //fill in the password information from MySQL here  
 ```
 ### Start Environment  
